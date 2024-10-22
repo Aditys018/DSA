@@ -27,4 +27,26 @@ int main()
 }
 */
 
+#include<stdio.h>
 
+void Divide(int iNo1, int iNo2)
+{
+    int iAns = 0;
+
+    if(ino2 )
+    {
+        return -1;
+    }
+
+    iAns = iNo1/ iNo2;
+    return    ;
+}
+
+int main()
+{
+    int iValue1 = 15, iValue2 = 5;
+    int iRet = Divide(iValur1,iValue2);
+    printf("Division is %d" , & iRet);
+
+    return 0;
+}
