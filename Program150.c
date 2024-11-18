@@ -1,0 +1,23 @@
+/*
+PROBLEMS ON STRING
+(string traversal)
+*/
+
+#include<stdio.h>
+
+int main()
+{
+   char Arr[30];
+   char *ptr = Arr;
+
+   printf("Enter String: \n");
+   scanf("%[^'\n']s" , Arr);
+
+    while(*ptr != '\0')
+    {
+        printf("%c" , *ptr);
+        ptr++;
+    }
+   return 0;
+
+}
