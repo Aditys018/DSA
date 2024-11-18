@@ -1,8 +1,8 @@
 #include<stdio.h>
 
-int CountDigits(int iNo)
+void DisplayDigits(int iNo)
 {
-    int iDigit = 0, iCount = 0;
+    int iDigit = 0;
 
     if(iNo < 0) // Updator
     {
@@ -12,21 +12,19 @@ int CountDigits(int iNo)
     while(iNo > 0)
     {
         iDigit = iNo % 10;
-        iCount++;
+        printf("%d\n",iDigit);
         iNo = iNo / 10;
     }
-    return iCount;
 }
 
 int main()
 {
-    int iValue = 0, iRet = 0;
+    int iValue = 0;
 
     printf("Enter number : \n");
     scanf("%d",&iValue);
 
-    iRet = CountDigits(iValue);
-    printf("Number of digits are : %d\n",iRet);
+    DisplayDigits(iValue);
 
     return 0;
 }

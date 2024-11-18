@@ -25,7 +25,7 @@ void DisplayTimeTable(int iStd)
         case 9:
              printf("your exam is at 10.30\n");
              break;
-        case10:
+        case 10:
              printf("your exam is at 11.30\n");
              break;
              

@@ -5,26 +5,22 @@
 
 void Display(int iNo)
 {
-  
-   int iCnt = 0;
-    for(iCnt=1; iCnt<=iNo; iCnt++)
-   {
-      printf("Jay Ganesh.....\n");
-   }
+    int iCnt = 0;
+    for(iCnt = 1; iCnt <= iNo; iCnt++)
+    {
+        printf("Jay Ganesh…\n");
+    }
 }
-
 
 int main()
 {
-   
-    int iIteration = 0;
 
-    printf("Enter the loop iteration count:\n");
-    scanf("%d" , &iIteration );
+    int iFrequency = 0;
 
-    Display(iIteration);
+    printf("Enter the frequency : \n");
+    scanf("%d",&iFrequency);
 
-    return 0;
+    Display(iFrequency);
     
-
+    return 0;
 }

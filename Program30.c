@@ -2,14 +2,14 @@
 //static iteration(pratyek veli different value display honar)
 
 #include<stdio.h>
+
 int main()
 {
-    int iCnt  = 0;
-
-    for(iCnt=1;iCnt<=4; iCnt++)
-    {
-        printf("%d \n", iCnt);
-    }
-
+    printf("1 \n");
+    printf("2 \n");
+    printf("3 \n");
+    printf("4 \n");
+    printf("5 \n");
+    
     return 0;
 }

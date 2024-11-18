@@ -2,23 +2,24 @@
 
 #include<stdio.h>
 
-
 void Display(int iValue)
 {
     int iCnt = 0;
-
-     for(iCnt=9; iCnt>=0;iCnt--);
+    
+    for(iCnt = iValue; iCnt>= 1; iCnt--)
     {
-        printf("%d\n" , iCnt);
+        printf("%d\n",iCnt);
     }
 }
+
 int main()
 {
-    int iFreq = 0;
-    printf("Enter the number: \n");
-    scanf("%d" , &iFreq);
+    int iFrequency = 0;
 
-    Display(iFreq);
+    printf("Enter the frequency : \n");
+    scanf("%d",&iFrequency);
+
+    Display(iFrequency);
 
     return 0;
 }

@@ -19,7 +19,8 @@ int main()
 
     printf("Enter the frequency: \n");
     scanf("%d" , &iFrequency);
-
+    
+    Display(iFrequency);
 
     return 0;
 }

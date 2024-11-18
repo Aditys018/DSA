@@ -1,16 +1,8 @@
-/*
-Accept input from user and count even digits from the user input
-
-*/
-
-
-
-
 #include<stdio.h>
 
-int CountDigits(int iNo)
+int CountOddDigits(int iNo)
 {
-    int iCount = 0;
+    int iDigit = 0, iCount = 0;
 
     if(iNo < 0) // Updator
     {
@@ -19,7 +11,11 @@ int CountDigits(int iNo)
 
     while(iNo > 0)
     {
-        iCount++;
+        iDigit = iNo % 10;
+        if(iDigit % 2 != 0)
+        {
+            iCount++;
+        }
         iNo = iNo / 10;
     }
     return iCount;
@@ -32,8 +28,8 @@ int main()
     printf("Enter number : \n");
     scanf("%d",&iValue);
 
-    iRet = CountDigits(iValue);
-    printf("Number of digits are : %d\n",iRet);
+    iRet = CountOddDigits(iValue);
+    printf("Number of odd digits are : %d\n",iRet);
 
     return 0;
 }
