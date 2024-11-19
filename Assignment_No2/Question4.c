@@ -12,7 +12,7 @@ Input:  21,-3
 Output: 21,21,21
 
 Input:  -2,0
-Output: 
+Output:
 
 
 #include<stdio.h>
@@ -48,14 +48,14 @@ int main()
 
 #include<stdio.h>
 
-_______Display(______iNo, int iFrequency)
+void Display(int iNo, int iFrequency)
 {
-    int int =0;
+     
     //write updater
 
-    for(____:________:_______)
+    for(int i = 0; i<iFrequency; i++)
     {
-        printf("_____,__________);
+        printf("%d" , iNo);
     }
 }
 
@@ -64,12 +64,12 @@ int main()
     int iValue = 0;
     int iCount = 0;
 
-    printf("Enter number");
-    scanf("_______", &_______);
+    printf("Enter number:\n");
+    scanf("%d", &iValue);
 
-    printf("Enter frequency");
-    scanf("________",&_________);
+    printf("Enter frequency:\n");
+    scanf("%d",&iCount);
 
-    Display(__________,___________);
+    Display(iValue,iCount);
     return 0;
 }

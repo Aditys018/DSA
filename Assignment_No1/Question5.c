@@ -34,9 +34,9 @@ void Accept(int iNo)
 {
     int iCnt = 0;
 
-    for (_________;_________;___________)
+    for (iCnt =0;iCnt < iNo; iCnt++)
     {
-        printf(*)
+        printf("* ");
     }
 
 }
@@ -45,9 +45,12 @@ int main()
 
 {
 int iValue = 0;
-iValue = 5;
+
+printf("Enter a number:\n");
+scanf("%d" , &iValue);
 
 Accept(iValue);
+
 return 0;
 
 }

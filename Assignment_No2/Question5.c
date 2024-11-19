@@ -37,27 +37,40 @@ int main()
 
 #include<stdio.h>
 
-#definr TRUE1
+#define TRUE 1
 #define FALSE 0
-
 typedef int BOOL;
 
 BOOL ChkEven(int iNo)
 {
-    //Logic
+    if (iNo % 2 == 0)
+    {
+        return TRUE;
+    }
+    else
+    {
+        return FALSE;
+    }
 }
 
 int main()
 {
     int iValue = 0;
-    Bool bRet = FALSE;
+    BOOL bRet = FALSE;
 
-    printf("Enter number");
-    scanf("_______", &_______);
+    printf("Enter number:\n");
+    scanf("%d", &iValue);
 
-    bRet = ChkEven(_________);
+    bRet = ChkEven(iValue);
 
-    //Display result
+    if (bRet == TRUE)
+    {
+        printf("The number is even.\n");
+    }
+    else
+    {
+        printf("The number is odd.\n");
+    }
 
     return 0;
 

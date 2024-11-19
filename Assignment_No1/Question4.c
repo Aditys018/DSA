@@ -53,17 +53,17 @@ int main()
 
 typedef int BOOL;
 #define TRUE 1
-#define FALSE______
+#define FALSE 0
 
-_______Check(_____iNo)
+BOOL Check(int iNo)
 {
-    if((_____%5)==0)
+    if((iNo % 5) == 0)
     {
         return TRUE;
     }
     else
     {
-        return_______;
+        return FALSE;
     }
 
 }
@@ -72,19 +72,19 @@ int main()
     int iValue = 0;
     BOOL bRet = FALSE;
 
-    printf("enter number");
-    scanf("______",&_________);
+    printf("enter number: \n");
+    scanf("%d\n",&iValue);
 
     bRet = Check(iValue);
 
     if(bRet == TRUE)
     {
-        printf("Divisible by 5");
+        printf("Divisible by 5\n");
     
     }
     else
     {
-        printf("Not divisible by 5");
+        printf("Not divisible by 5\n");
     }
 
     return 0;

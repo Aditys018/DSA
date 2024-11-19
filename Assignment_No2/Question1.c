@@ -30,6 +30,7 @@ int main()
 }
 
 */
+#include<stdio.h>
 
 
 void Display(int iNo)
@@ -37,10 +38,11 @@ void Display(int iNo)
 
 int iCnt = 0;
 //write updater
-while(iCnt<__________)
+while(iCnt< iNo)
 {
-    printf("*");
-    _________;
+    printf("* ");
+    iCnt++;
+    
 }
 
 
@@ -50,8 +52,8 @@ int main()
 {
     int iValue = 0;
 
-    printf("Enter Number");
-    scanf("_____", &________);
+    printf("Enter Number: \n");
+    scanf("%d", &iValue);
 
     Display(iValue);
 

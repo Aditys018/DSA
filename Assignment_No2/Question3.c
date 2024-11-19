@@ -29,18 +29,18 @@ int main()
 
 }
 */
+#include<stdio.h>
 
-
-______Display(______iNo)
+int Display(int iNo)
 {
-    if(_______<__________)
+    if(iNo<10)
     {
         printf("Hello");
     
     }
     else
     {
-        printf("_______");
+        printf("Demo");
     }
 }
 
@@ -48,8 +48,8 @@ int main()
 {
     int iValue = 0;
 
-    printf("enter number");
-    scanf("_____",&______);
+    printf("enter number: \n");
+    scanf("%d",&iValue);
 
     Display(iValue);
 

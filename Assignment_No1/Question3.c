@@ -28,13 +28,13 @@ int main()
 
 void Display()
 {
-    int i=0;
-    int i=5;
+    int i = 5;
+    
 
-    while(i=0)
+    while(i > 0)
     {
         printf("%d", i);
-        i++;
+        i--;
     }
 }
 
