@@ -49,13 +49,14 @@ void DisplayFactor(int iNo)
         iNo = - iNo;
     }
 
-    for(i =1; i<=____;i++)
+    for(i =1; i<=iNo; i++)
     {
-        if(_____________)
+        if(iNo % i == 0 && i % 2 == 0)
         {
-            print("%d", i)
+            print("%d ", i);
         }
     }
+     printf("\n");
 }
 
 int main()

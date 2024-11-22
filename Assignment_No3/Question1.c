@@ -34,23 +34,32 @@ int main()
 
 */
 
+#include<stdio.h>
 
 void PrintEven(int iNo)
 {
      if(iNo <= 0)
      {
+        printf("Enter a positive number.");
         return;
      }
-     //Logic
+     int iCnt = 0;
+     int iEven = 2;
 
+     for(iCnt = 1; iCnt <= iNo; iCnt++)
+     {
+        printf("%d\t" , iEven);
+        iEven += 2;
+     }
+     
 }
 
 int main()
 {
     int iValue = 0;
 
-    printf("Enter number\n");
-    scanf("%d", & iValue);
+    printf("Enter number:\n");
+    scanf("%d", &iValue);
 
     PrintEven(iValue);
 
