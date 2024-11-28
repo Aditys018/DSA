@@ -1,0 +1,48 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "OpaaGo-GKRB7cExzoO_qw",
+      "type": "text",
+      "x": 286.3999938964844,
+      "y": 275.20001220703125,
+      "width": 293.3797302246094,
+      "height": 250,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "roundness": null,
+      "seed": 567009245,
+      "version": 40,
+      "versionNonce": 2123427837,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1732433790133,
+      "link": null,
+      "locked": false,
+      "text": "\ntopics covered til date:\n\n1.Problems on numbers\n2.Problems on digits\n3.Problems on  N numbers\n4.Problems on pattern printing\n5.Problems on string\n6. Problems on N numbers\n",
+      "fontSize": 20,
+      "fontFamily": 1,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "baseline": 243,
+      "containerId": null,
+      "originalText": "\ntopics covered til date:\n\n1.Problems on numbers\n2.Problems on digits\n3.Problems on  N numbers\n4.Problems on pattern printing\n5.Problems on string\n6. Problems on N numbers\n",
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}

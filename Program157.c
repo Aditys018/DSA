@@ -5,7 +5,7 @@ int main()
     char Arr[30];
 
     printf("Enter string:\n");
-    scanf("%s" , Arr);
+    scanf("%[^'\n']s" , Arr);
 
     printf("Entered string is : \n" , Arr);
 
