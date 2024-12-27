@@ -15,9 +15,9 @@ void InsertFirst(PPNODE head, int no)
 {
     PNODE newn = NULL;
 
-    newn = (PNODE)malloc(sizeof(NODE));     
+    newn = (PNODE)malloc(sizeof(NODE));
 
-    newn->data = no;                        
+    newn->data = no;
     newn->next = NULL;
 
     if(*head == NULL)   // case 1 (LL is empty)
@@ -31,32 +31,7 @@ void InsertFirst(PPNODE head, int no)
     }
 }
 
-void InsertLast(PPNODE head, int no)
-{
-    PNODE newn = NULL;
-    PNODE temp = NULL;
 
-    newn = (PNODE)malloc(sizeof(NODE));
-
-    newn->data = no;
-    newn->next = NULL;
-
-    if(*head == NULL)   // case 1 (LL is empty)
-    {
-        *head = newn;
-    }
-    else // case 2 (LL contains atleast 1 node)
-    {
-        temp = *head;
-
-        while(temp->next != NULL)
-        {
-            temp= temp->next;
-        }
-
-        temp->next = newn;
-    }
-}
 
 int main()
 {
@@ -65,9 +40,6 @@ int main()
     InsertFirst(&first,51);
     InsertFirst(&first,21);
     InsertFirst(&first,11);
-    
-    InsertLast(&first,101);
-    InsertLast(&first,111);
     
     return 0;
 }

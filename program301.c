@@ -7,23 +7,19 @@ struct node
     struct node *next;
 };
 
-typedef struct node NODE;
-typedef struct node* PNODE;
-typedef struct node** PPNODE;
-
-void Demo1(PNODE head)
+void Demo1(struct node *head)
 {   }
 
-void Demo2(PPNODE head)
+void Demo2(struct node **head)
 {   }
 
 int main()
 {
-    PNODE first = NULL;
+    struct node *first = NULL;
 
-    NODE obj1;
-    NODE obj2;
-    NODE obj3;
+    struct node obj1;
+    struct node obj2;
+    struct node obj3;
 
     obj1.data = 11;
     obj2.data = 21;

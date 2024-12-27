@@ -15,9 +15,9 @@ void InsertFirst(PPNODE head, int no)
 {
     PNODE newn = NULL;
 
-    newn = (PNODE)malloc(sizeof(NODE));     
+    newn = (PNODE)malloc(sizeof(NODE));
 
-    newn->data = no;                        
+    newn->data = no;
     newn->next = NULL;
 
     if(*head == NULL)   // case 1 (LL is empty)
@@ -36,9 +36,9 @@ void InsertLast(PPNODE head, int no)
     PNODE newn = NULL;
     PNODE temp = NULL;
 
-    newn = (PNODE)malloc(sizeof(NODE));     
+    newn = (PNODE)malloc(sizeof(NODE));
 
-    newn->data = no;                        
+    newn->data = no;
     newn->next = NULL;
 
     if(*head == NULL)   // case 1 (LL is empty)
@@ -62,10 +62,9 @@ void Display(PNODE head)
 {
     while(head != NULL)
     {
-	    printf("| %d |->", head->data);
+	    printf("%d\t", head->data);
 	    head = head -> next;
     }
-    printf("NULL\n");
 }
 
 int Count(PNODE head)
@@ -81,54 +80,6 @@ int Count(PNODE head)
     return iCount;
 }
 
-void DeleteFirst(PPNODE head)
-{
-    PNODE temp = NULL;
-
-    if(*head == NULL)
-    {
-        return;
-    }
-    else if((*head) -> next == NULL)
-    {
-        free(*head);
-        *head = NULL;
-    }
-    else
-    {
-        temp = *head;
-        *head = (*head)->next;
-        free(temp);
-    }
-}
-
-void DeleteLast(PPNODE head)
-{
-    PNODE temp = NULL;
-
-    if(*head == NULL)
-    {
-        return;
-    }
-    else if((*head) -> next == NULL)
-    {
-        free(*head);
-        *head = NULL;
-    }
-    else
-    {
-        temp = *head;
-
-        while(temp->next->next != NULL)
-        {
-            temp = temp->next;
-        }
-
-        free(temp->next);
-        temp->next = NULL;
-    }
-}
-
 int main()
 {
     PNODE first = NULL;
@@ -141,20 +92,6 @@ int main()
     InsertLast(&first,101);
     InsertLast(&first,111);
     
-    Display(first);
-
-    iRet = Count(first);
-    printf("Number of elements are : %d\n",iRet);
-    
-    DeleteFirst(&first);
-
-    Display(first);
-
-    iRet = Count(first);
-    printf("Number of elements are : %d\n",iRet);
-    
-    DeleteLast(&first);
-
     Display(first);
 
     iRet = Count(first);

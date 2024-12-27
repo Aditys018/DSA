@@ -1,45 +1,33 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-
 struct node
 {
-   int data;
-   struct node *next;
+    int data;
+    struct node *next;
 };
 
 typedef struct node NODE;
 typedef struct node* PNODE;
-typedef struct node ** PPNODE;
+typedef struct node** PPNODE;
 
-
-void Demo1(PNODE head)
+void InsertFirst(PPNODE head, int no)
 {
-
 }
-void Demo2(PPNODE head)
+
+void Display(PNODE head)
 {
-
 }
+
 int main()
 {
-    struct node * first = NULL;
-    struct node obj1;
-    struct node obj2;
-    struct node obj3;
+    PNODE first = NULL;
 
-    obj1.data = 11;
-    obj2.data = 21;
-    obj3.data = 51;
+    InsertFirst(&first,51);
+    InsertFirst(&first,21);
+    InsertFirst(&first,11);
 
-    obj1.next = &obj2;
-    obj2.next = &obj3;
-    obj3.next = NULL;
-
-    first = &obj1;
-    Demo1(first);
-    Demo2(&first);
-
- return 0;
-
+    Display(first);
+    
+    return 0;
 }
