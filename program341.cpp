@@ -27,7 +27,7 @@ class SinglyLL
         {
             PNODE newn = NULL;
 
-            newn = new NODE;    
+            newn = new NODE;
             newn->data = no;
             newn->next = NULL;
 
@@ -48,7 +48,7 @@ class SinglyLL
             PNODE newn = NULL;
             PNODE temp = NULL;
 
-            newn = new NODE;   
+            newn = new NODE;
             newn->data = no;
             newn->next = NULL;
 
@@ -70,7 +70,42 @@ class SinglyLL
             iCount++;
         }
         
-        void InsertAtPos(int no , int ipos){}
+        void InsertAtPos(int no , int ipos)
+        {
+            int i =0;
+            PNODE newn = NULL;
+            PNODE temp = NULL;
+
+            if(ipos < 1 || ipos > iCount+1)
+            {
+                cout<<"Invalid position\n";
+                 return;
+            }
+            if(ipos ==1)
+            {
+                InsertFirst(no);
+
+            }
+            else if(ipos == iCount + 1)
+            {
+                InsertLast(no);
+            }
+            else
+            {
+                newn = new NODE;
+                newn->data = no;
+                newn->next = NULL;
+
+                temp = head;
+
+                for(i=1; i<ipos-1; i++)
+                {
+                    temp = temp->next;
+                }
+                newn->next = temp->next;
+            }
+           
+        }
 
         void DeleteFirst()
         {
@@ -124,7 +159,95 @@ class SinglyLL
             iCount--;
         }
         
-        void DeleteAtPos(int ipos){}
+        void DeleteAtPos(int ipos)
+        {
+            
+            int i =0;
+            
+            PNODE temp = NULL;
+
+            if(ipos < 1 || ipos > iCount)
+            {
+                cout<<"Invalid position\n";
+                 return;
+            }
+            if(ipos ==1)
+            {
+                DeleteFirst();
+
+            }
+            else if(ipos == iCount)
+            {
+                DeleteLast();
+            }
+            else
+            {
+                
+
+                temp = head;
+
+                for(i=1; i<ipos-1; i++)
+                {
+                    temp = temp->next;
+                }
+               target= temp->next;
+               temp ->next = target->next;
+               delete target;
+            }
+           
+        }
+
+        void DeleteFirst()
+        {
+            PNODE temp = NULL;
+
+            if(head == NULL)
+            {
+                return;
+            }
+            else if(head->next == NULL)
+            {
+                delete head;
+                head = NULL;
+            }
+            else
+            {
+                temp = head;
+
+                head = head -> next;
+                delete temp;
+                
+            }
+            iCount--;
+        }
+        
+        void DeleteLast()
+        {
+            PNODE temp = NULL;
+
+            if(head == NULL)
+            {
+                return;
+            }
+            else if(head->next == NULL)
+            {
+                delete head;
+                head = NULL;
+            }
+            else
+            {
+                temp = head;
+
+                while(temp->next->next != NULL)
+                {
+                    temp = temp -> next;
+                }
+
+                delete temp->next;
+                temp->next = NULL;
+            }
+            iCount--;
+        }
 
         void Display()
         {
