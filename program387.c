@@ -43,7 +43,7 @@ void Insert(PPNODE head, int no)
                 {
                     temp->lchild = newn;
                     break;
-                } 
+                }
                 temp = temp -> lchild;
             }
             else if(no == temp->data)   // Identical

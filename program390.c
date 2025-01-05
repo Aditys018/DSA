@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<stdbool.h>
 
 typedef struct node
 {
@@ -43,7 +44,7 @@ void Insert(PPNODE head, int no)
                 {
                     temp->lchild = newn;
                     break;
-                } 
+                }
                 temp = temp -> lchild;
             }
             else if(no == temp->data)   // Identical
@@ -86,22 +87,91 @@ void Postorder(PNODE head)
     }
 }
 
+bool Search(PNODE head, int no)
+{
+    bool bFlag = false;
+
+    while(head != NULL)
+    {
+        if(no == head-> data)
+        {
+            bFlag = true;
+            break;
+        }
+        else if(no > head->data)
+        {
+            head = head->rchild;
+        }
+        else if(no< head->data)
+        {
+            head = head->lchild;
+        }
+        return bFlag;
+    }
+}
+
+void CountNodes(PNODE head)
+{
+    static int iCount = 0;
+
+    if(head != NULL)
+    {
+        iCount++;
+        CountNodes(head->lchild);
+        CountNodes(head->rchild);
+    }
+    return iCount;
+}
+
+void CountParentNodes(PNODE head)
+{
+    static int iCount = 0;
+
+    if(head->lchild != NULL) || (head->rchild != NULL)
+    {
+        iCount++;
+        
+    }
+    CountParentNodes(head->lchild);
+    CountParentNodes(head->rchild);
+    return iCount;
+}
+
+void CountLeafNodes(PNODE head)
+{
+    static int iCount = 0;
+
+    if(head->lchild == NULL) && (head->rchild != NULL)
+    {
+        iCount++;
+        
+    }
+    CountParentNodes(head->lchild);
+    CountParentNodes(head->rchild);
+    return iCount;
+}
+
 int main()
 {
     PNODE first = NULL;
+    bool bret = false;
 
-    Insert(&first,51);
     Insert(&first,21);
-    Insert(&first,101);
+    Insert(&first,11);
+    Insert(&first,51);
+    Insert(&first,9);
+    Insert(&first,18);
+    Insert(&first,35);
+    Insert(&first,75);
     
-    printf("Inorder traversal \n");
-    Inorder(first);
+    iRet = CountNodes(first);
+    printf("number of nodes are: %D\n" , iRet);
 
-    printf("Preorder traversal \n");
-    Preorder(first);
-    
-    printf("Postrder traversal \n");
-    Postorder(first);
+    iRet = CountParentNodes(first);
+    printf("number of parent nodes are: %D\n" , iRet);
+
+    iRet = CountLeafNodes(first);
+    printf("number of leaf nodes are: %D\n" , iRet);
 
     return 0;
 }
