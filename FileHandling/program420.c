@@ -6,20 +6,20 @@ int main()
     int fd = 0;
     char Name[30];
 
-    printf("enter filename\n");
-    scanf("%[^'\n]s" , Name);
+    printf("Please enter the file name that you want to open\n");
+    scanf("%[^'\n']s",Name);
 
-
-    fd = open(Name , O_RDWR);
+    fd = open(Name,O_RDWR);
 
     if(fd == -1)
     {
-        printf("unable to create file\n");
+        printf("Unable to open file\n");
     }
-    else
+    else 
     {
-        printf("file succesfully opened with FD %d\n" , fd);
-        write(fd,"Jay Ganesh" , 10);
+        printf("File succesfully opened with FD %d\n",fd);
+        
+        write(fd,"Jay ganesh",10);
 
         close(fd);
     }

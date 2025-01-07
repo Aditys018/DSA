@@ -3,14 +3,12 @@
 
 int main()
 {
-    int fd = 0;
     char Name[30];
-    
 
-    printf("enter the filename you want to delete\n");
-    scanf("%[^'\n]s, Name");
+    printf("Please enter the file name that you want to delete\n");
+    scanf("%[^'\n']s",Name);
 
     unlink(Name);
-
+    
     return 0;
 }

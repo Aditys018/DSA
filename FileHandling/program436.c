@@ -4,7 +4,8 @@
 int main()
 {
     char Name[30];
-    char Arr[20] = {'\0'};
+    char Arr[10] = {'\0'};
+    int iRet = 0;
     int fd = 0;
 
     printf("Please enter the file name that you want to open\n");
@@ -12,9 +13,16 @@ int main()
 
     fd = open(Name,O_RDONLY);
 
-    read(fd,Arr,8);
+   iRet = read(fd,Arr,10);
+    write(1,Arr,iRet);
 
-    printf("Data from the file is : %s\n",Arr);
-    
+   iRet = read(fd,Arr,10);
+    write(1,Arr,iRet);
+
+   iRet = read(fd,Arr,10);
+    write(1,Arr,iRet);
+
+    close(fd);
+
     return 0;
 }

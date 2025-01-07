@@ -8,29 +8,25 @@ int main()
     int iRet = 0;
     char Arr[50] = {'\0'};
 
-    printf("enter filename you want to open\n");
-    scanf("%[^'\n]s" , Name);
+    printf("Please enter the file name that you want to open\n");
+    scanf("%[^'\n']s",Name);
 
-
-    fd = open(Name , O_RDWR);
+    fd = open(Name,O_RDWR);
 
     if(fd == -1)
     {
-        printf("unable to create file\n");
+        printf("Unable to open file\n");
     }
-    else
+    else 
     {
-        printf("file succesfully opened with FD %d\n" , fd);
-
+        printf("File succesfully opened with FD %d\n",fd);
+        
         iRet = read(fd,Arr,5);
 
-       
-        printf("%d bytes gets successfully written into the file\n" , iRet);
+        printf("%d bytes gets sucussfully read from the file\n",iRet);
 
-        printf("data from the file is\n", iRet);
-
-        printf("data from file is :%S\n", Arr);
-
+        printf("Data from the file is : %s\n",Arr);
+        
         close(fd);
     }
 

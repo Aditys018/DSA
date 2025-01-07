@@ -1,26 +1,28 @@
 #include<stdio.h>
 #include<fcntl.h>
 
+#define FILESIZE 1024
+
 int main()
 {
     char Name[30];
-    char Arr[20] = {'\0'};
-    char Brr[20] = {'\0'};
-    
+    char Arr[FILESIZE] = {'\0'};
+    int iRet = 0, iSum = 0;
     int fd = 0;
 
     printf("Please enter the file name that you want to open\n");
     scanf("%[^'\n']s",Name);
 
     fd = open(Name,O_RDONLY);
-
-    read(fd,Arr,8);
-
-    printf("Data from the file is : %s\n",Arr);
     
-    read(fd,Brr,5);
+    while((iRet = read(fd,Arr,FILESIZE)) != 0)
+    {
+        iSum = iSum + iRet;
+    }
 
-    printf("Data from the file is : %s\n",Brr);
+    printf("File size is %d\n",iSum);
+
+    close(fd);
 
     return 0;
 }

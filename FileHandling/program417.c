@@ -6,19 +6,18 @@ int main()
     int fd = 0;
     char Name[30];
 
-    printf("enter filename\n");
-    scanf("%[^'\n]s" , Name);
+    printf("Please enter the file name that you want to create\n");
+    scanf("%[^'\n']s",Name);
 
+    fd = creat(Name,0777);
 
-    fd = creat(Name , 0777);
     if(fd == -1)
     {
-        printf("unaable to create file\n");
-
+        printf("Unable to create file\n");
     }
-    else
+    else 
     {
-        printf("file succesfully created with FD %d\n" , fd);
+        printf("File succesfully created with FD %d\n",fd);
     }
 
     return 0;

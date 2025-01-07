@@ -5,6 +5,7 @@ int main()
 {
     char Name[30];
     char Arr[20] = {'\0'};
+    
     int fd = 0;
 
     printf("Please enter the file name that you want to open\n");
@@ -12,9 +13,17 @@ int main()
 
     fd = open(Name,O_RDONLY);
 
-    read(fd,Arr,8);
+    lseek(fd,5,0);
 
-    printf("Data from the file is : %s\n",Arr);
-    
+    read(fd,Arr,10);
+
+    printf("Data from file is : %s\n",Arr);
+
+    close(fd);
+
     return 0;
 }
+
+// SEEK_SET     Surwatipasun                0
+// SEEK_CUR     Atta jithe aje tithun       1
+// SEEK_END     Shewatapasun                2

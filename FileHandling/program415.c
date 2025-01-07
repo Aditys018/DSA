@@ -11,15 +11,15 @@ int main()
 {
     int fd = 0;
 
-    fd = creat("Marvellous.txt" , 0777);
+    fd = creat("Marvellous.txt",0777);
 
-    if(fd == -1){
-        printf("unaable to create file\n");
-
-    }
-    else
+    if(fd == -1)
     {
-        printf("file succesfully created\n");
+        printf("Unable to create file\n");
+    }
+    else 
+    {
+        printf("File succesfully created\n");
     }
 
     return 0;

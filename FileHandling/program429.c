@@ -3,24 +3,27 @@
 
 int main()
 {
-    char Arr[20] {'\0'};
     char Name[30];
-    char Brr[20];
-    int fd = 0;
+    char Arr[20] = {'\0'};
     
+    int fd = 0;
 
-    printf("enter the filename you want to delete\n");
-    scanf("%[^'\n]s, Name");
+    printf("Please enter the file name that you want to open\n");
+    scanf("%[^'\n']s",Name);
 
     fd = open(Name,O_RDONLY);
 
-    read(fd,Arr,8);
+    lseek(fd,5,SEEK_SET);
 
-    printf("data from the file is:%s\n" , Arr);
+    read(fd,Arr,10);
 
-    read(fd,Brr,5);
+    printf("Data from file is : %s\n",Arr);
 
-    printf("Data from the file is: %s\n" , Brr);
+    close(fd);
 
     return 0;
 }
+
+// SEEK_SET     Surwatipasun                0
+// SEEK_CUR     Atta jithe aje tithun       1
+// SEEK_END     Shewatapasun                2

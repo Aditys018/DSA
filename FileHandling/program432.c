@@ -14,13 +14,13 @@ int main()
 
     fd = open(Name,O_RDONLY);
 
-    lseek(fd,5,SEEK_SET);
+    lseek(fd,5,0);
 
     read(fd,Arr,10);
 
     printf("Data from file is : %s\n",Arr);
 
-    lseek(fd,5,SEEK_CUR);
+    lseek(fd,5,1);
         
     read(fd,Brr,10);
 
