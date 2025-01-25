@@ -1,6 +1,6 @@
 /*
 PROBLEM BASED ON SWITCH CASE
-technically it's called ifelseif ladder
+technically it's called if-else-if ladder
 
 there's one school of 8,9,10 standards. 8th std exams is at 9:30 , 9th at 10.30 and 10th at 11:30
 take input standard from user and then the program should be able to display their exam time
