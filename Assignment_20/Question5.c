@@ -1,13 +1,14 @@
 /*
 Accept the number of rows and columns from the user and display the below pattern
 
-Input :  iRow = 3  iCol = 5
+Input :  iRow = 3  iCol = 4
 
 Output:
 
-5 4 3 2 1
-5 4 3 2 1
-5 4 3 2 1
+1 1 1 1
+2 2 2 2
+3 3 3 3
+4 4 4 4
 
 
 program layout:
@@ -21,6 +22,7 @@ void Pattern(int iRow, int iCol)
 int main()
 {
     int iValue = 0, iValue2 = 0;
+    
     printf("Enter number if rows and columns");
     scanf("%d %d", &iValue1, &iValuse2);
 
@@ -31,27 +33,3 @@ int main()
 }
 
 */
-
-
-
-
-
-
-#include<stdio.h>
-
-
-void pattern(int iRow, int iCol)
-{
-    
-}
-int main()
-{
-    int iValue1 = 0, iValue2 = 0;
-
-    printf("Enter number of rows and columns:\n");
-    scanf("%d%d", &iValue1, &iValue2);
-
-    pattern(iValue1, iValue2);
-    return 0;
-
-}

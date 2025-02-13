@@ -1,3 +1,38 @@
+/*
+Accept number of rows and columns from the suer and display below pattern
+
+Input: iRow= 4   iCol = 3
+Output: * * *
+        * * *
+        * * *
+
+
+Program Layout:
+
+
+#include<stdio.h>
+void Pattern(int iRow, int iCol)
+{
+    //Logic
+}
+
+int main()
+{
+    int iValue1 = 0, iValue2 = 0;
+
+    printf("Enter number of rows and columns");
+    scanf(%d %D, &iValue1, &iValue2);
+
+    Pattern(iValue1, iValue2);
+
+    return 0;
+
+}
+
+*/
+
+
+
 #include <stdio.h>
 
 
