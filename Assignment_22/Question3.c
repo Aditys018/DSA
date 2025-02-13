@@ -1,13 +1,14 @@
 /*
     Accept number of rows and columns from the user and display below pattern
 
-    Input: iRow = 4  iCol = 4
+    Input: iRow = 5 iCol = 5
 
     Output:
-    A B C D
-    a b c d
-    A B C D
-    a b c d
+    a b c d e
+    1 2 3 4 5
+    a b c d e
+    1 2 3 4 5
+    a b c d e
 
 
 

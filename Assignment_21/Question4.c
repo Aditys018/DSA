@@ -1,16 +1,15 @@
 /*
     Accept number of rows and columns from the user and display below pattern
 
-    Input: iRow = 4  iCol = 4
+    Input: iRow = 4  iCol = 5
 
     Output:
-    A B C D
-    a b c d
-    A B C D
-    a b c d
+    4 4 4 4
+    3 3 3 3
+    2 2 2 2
+    1 1 1 1
 
-
-
+    
     Program layout:
 
     #include<stdio.h>

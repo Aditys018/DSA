@@ -4,10 +4,10 @@
     Input: iRow = 4  iCol = 4
 
     Output:
-    A B C D
-    a b c d
-    A B C D
-    a b c d
+    2 4 5 8 10
+    1 3 5 7 9
+    2 4 6 8 10
+    1 3 5 7 9
 
 
 
