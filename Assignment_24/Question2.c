@@ -4,10 +4,10 @@
     Input: iRow = 4  iCol = 4
 
     Output:
-    * * * #
-    * * # *
-    * # * *
-    # * * *
+    * * * *
+    * * *
+    * *
+    *
     
 
     Program layout:
